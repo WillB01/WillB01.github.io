@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none; 
+
+}
+body, html {
+    background: #000000;
+    height: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#welcome {
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 4em;
+    margin: 10em;
+}
+
+
+#slide {
+    display: none;
+}
+#grid-container{
+    display: grid;
+    grid-auto-columns: repeat(5,1fr);
+    margin: 20px, auto;
+    max-width: 960px;
+    position: relative;
+    margin: 5em auto;
+    grid-template-areas: 
+    
+    "h1 h1 h1 h1 h1"
+    "input input input input input"
+    "a a a a a"
+    "my-btn my-btn my-btn my-btn my-btn" 
+    
+
+    "my-img-1 my-img-2 my-img-3 my-img-4 my-img-5"
+    
+ 
+    "output output output output output" 
+
+}
+.user-bulbs {
+    display: grid;
+    grid-template-columns:auto auto auto auto auto;
+    grid-auto-rows:200px, 1fr;
+    grid-area: a;
+      
+}
+
+#user-bulb-img{
+    width: 100%;
+    
+    margin: 0;
+    
+}
+
+#input-wrapper{
+    grid-area: input;
+    color: #fcfcfc;
+    padding: 1em;
+}
+
+#my-btn{
+    grid-area: my-btn;
+    height: 2em;
+    background: #fcfcfc;
+    font-size: 3em;
+    font-weight: 800;
+    transition: all ease-in-out 300ms;
+    margin-top: 1em;
+    border: none;
+    
+    
+}
+
+#my-btn:hover{
+   background: #000000;
+   cursor: pointer;
+   color: #fcfcfc;
+   border: #fcfcfc 0.3em solid;
+   letter-spacing: 0.02em;
+   
+
+}
+
+#my-btn:focus {
+    outline:0;
+
+}
+
+#output {
+    color: #fcfcfc;
+    font-weight: 800;
+    font-size: 8em;
+    grid-area: output;
+    text-align: center;
+    border: #fcfcfc 0.01em solid;
+    
+}
+
+h1{
+    color: #fcfcfc;
+    text-align: center;
+    font-size: 4em;
+    grid-area: h1;
+    border-bottom: #fcfcfc 0.02em solid;
+}
+
+.my-img-1{grid-area: my-img-1;}
+.my-img-2{grid-area: my-img-2;}
+.my-img-3{grid-area: my-img-3;}
+.my-img-4{ grid-area: my-img-4;}
+.my-img-5{grid-area: my-img-5;}
+
+.my-img{
+    width: 100%;
+    margin: 4em auto;
+    padding: 0;
+}
+
+
+#side-wrapper{
+    position: fixed;
+    z-index: 5;
+    top: 10em;
+    width: 10%;
+    left: 0;
+    text-align: center;
+    color: #fcfcfc;
+}
+#my-btn-side{
+    width: 100%;
+}
+
+
+
+.btn-style{
+  background-color: #222; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: white;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  Transition: background-color 0.1s ease-out;
+  border: none;
+  margin-bottom: 1em;
+	
+}
+
+.btn-style:hover {
+    background-color: #2CD892; 
+    cursor: pointer;
+   
+    
+}
+
+.btn-style:focus{
+    position:relative;
+    outline:0;
+}
+
+
+label {
+    font-size: 1.5em;
+    background: rgb(211, 155, 51);
+    display: inline-block;
+    height: 3em;
+    text-align: center;
+    padding-top: 1em;
+    
+    
+}
+#input {
+    height: 2em;
+    font-size: 3em;
+    text-align: center;
+    border: none;
+    
+
+}
+
+#input-wrapper{
+    display: grid;
+    align-items: end;
+
+}
+
+#amount-hover{
+    cursor: pointer;
+}
+#amount-hover:hover{
+    cursor: pointer;
+    background: #d3c172;
+}
+
+@media only screen and (max-width: 1180px) {
+    #side-wrapper{
+        top: 30em;
+        
+    }
+    
+    #side-wrapper > .btn-style{
+        background: none;
+        color: rgb(255, 255, 255);
+        font-size: 1em;
+        font-weight: 600;
+        border-bottom: #fcfcfc 0.3em solid;
+        transition: ease-in-out 300ms;
+        
+    }
+    #side-wrapper > .btn-style:focus{
+        border-bottom: #2CD892 0.3em dotted;
+    }
+    #side-wrapper > .btn-style:hover{
+        border-bottom: #2CD892 0.3em dotted;
+    }
+}
