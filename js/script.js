@@ -50,7 +50,9 @@ $(function() {
 $(function(){
     let amount;   
     $('#amount-hover').mouseover(function(){
-        console.log("pop");
+        $('#input').toggle("slow");
+    });
+    $('#amount-btn').mouseover(function(){
         $('#input').toggle("slow");
     });
     $('#amount-btn').click(function(){
