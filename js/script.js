@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 //NORMAL GAME MODE /**********************************************************/
 $(function(){
-    $('#classic-hover').mouseover(function(){
+    $('#classic-hover').click(function(){
         $('#basic-game').toggle("slow");
     });
     $('#basic-game').click(function(){
@@ -56,7 +56,7 @@ $(function() {
 //SUPER GAME MODE USER PICKS AMOUNT OF BULBS /********************************/
 $(function(){
     let amount;   
-    $('#amount-hover').mouseover(function(){
+    $('#amount-hover').click(function(){
         $('#input').toggle("slow");
         $('#amount-hover').css({margin:"0 0 0 0"});
     });
