@@ -203,6 +203,16 @@ label {
     background: #d3c172;
 }
 
+#classic-hover{
+    cursor: pointer;
+    background: #c97837;
+}
+
+#classic-hover:hover{
+    background: #f8d94e;
+}
+
+
 @media only screen and (max-width: 1180px) {
     #side-wrapper{
         top: 18em;

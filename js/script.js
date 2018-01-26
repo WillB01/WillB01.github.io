@@ -4,6 +4,9 @@ $(document).ready(function(){
         $("#side-wrapper").css({display:"none"});
         $(".basic").css({display:"none"});
         $('#input').css({display:"none"});
+        $('#amount-btn').css({display:"none"});
+        $('#basic-game').css({display:"none"});
+        $('#reset').css({display:"none"});
         $(`.my-img-${1}`).attr('src','/img/bulb-on.jpg');
         clearInputText();
     });
@@ -11,8 +14,12 @@ $(document).ready(function(){
 
 //NORMAL GAME MODE /**********************************************************/
 $(function(){
+    $('#classic-hover').mouseover(function(){
+        $('#basic-game').toggle("slow");
+    });
     $('#basic-game').click(function(){
         clearInputText();
+        $('#reset').fadeIn();
         $('.del').slideUp(300).delay(400).fadeOut(2000); //////////////////////////CHANGE THIS NOT NICE/////////////////////////////////////////////////7
         $('.basic').fadeIn(3000);
         $('.super-mode').css({display:"none"}); /////WATCH OUT NOT WORKING
@@ -22,7 +29,7 @@ $(function(){
 //Counter and Light on/off.
 $(function() {
     let count = 1, output = $('#output');
-    
+ 
     setInterval(function(){ output.html(count)}); 
     $('#my-btn').click(function(){ 
         count++;
@@ -51,11 +58,13 @@ $(function(){
     let amount;   
     $('#amount-hover').mouseover(function(){
         $('#input').toggle("slow");
+        $('#amount-hover').css({margin:"0 0 0 0"});
     });
-    $('#amount-btn').mouseover(function(){
-        $('#input').toggle("slow");
+    $('#input').click(function(){
+        $('#amount-btn').toggle("slow");
     });
     $('#amount-btn').click(function(){
+            $('#reset').fadeIn();
             $('.del').slideUp(300).delay(400).fadeOut(2000); //////////////////////////CHANGE THIS NOT NICE/////////////////////////////////////////////////7
             amount = $('#input').val(); //user input amout of bulbs
             
